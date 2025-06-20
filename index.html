@@ -1,7 +1,214 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Eagles Nest</title>
+  <link rel="icon" href="https://cdnsm5-ss20.sharpschool.com/UserFiles/Servers/Server_2742355/Image/Theme/Dunlap%20High%20School%20Logo%20-%20Seal-01.png"   type="image">
+  <link href='/style.css' rel='stylesheet'>
+  <!--Linking Ubuntu used in Google Fonts-->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+  <!--Creating background image that is constant-->
+  <style>
+  
+  body {
+    background-image: url('https://i.postimg.cc/Lsqw6LPf/dunlaphigh.jpg');
+    max-width:20000px;
+    width:95%;
+    background-repeat: no-repeat;
+    background-position: center top;
+    height: 100px;
+    position: relative;
+    margin-top: 0;
+    margin-right: auto;
+    margin-bottom: 0;
+    margin-left: auto;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-attachment: fixed;
+  }
+  .title{
+    color: rgb(94,42,43);
+    font-size: 55px;
+    font-family: Ubuntu;
+    background-color:rgba(255,255,255,0.4);
+    text-align: center;
+
+  }
+
+  .banner{
+    padding: 20px 30px 0px 30px;
+    background-color:rgba(255,255,255,0.9);
+    display: flex;
+    justify-content: space-between;
+  }
+
+ .banner-text{
+    vertical-align: middle;
+    color:black;
+    font-size:20px;
+    font-family: Ubuntu;
+    padding: 10px 0px 0px 0px;
+    transition: color 0.15s, font-size 0.15s, opacity 0.15s;
+  }
+
+  .banner-text:hover{
+    color: rgb(198,183,132);
+    font-size:28px;
+  }
+
+  .banner-text:active{
+    color: rgb(94,42,43);
+    opacity: 0.6;
+  }
+
+  .header{
+    font-family: Ubuntu;
+    font-size: 20px;
+    font-weight:bold;
+    text-decoration: underline;
+    background-color:rgba(255,255,255,0.4);
+    text-align: center;
+  }
+
+  .text{
+    font-family: Ubuntu;
+    background-color:rgba(255,255,255,0.4);
+    font-size: 20px;
+    line-height:30px;
+    text-align: center;
+  }
+
+  .logo{
+    max-width: 50px;
+   }
+
+  .footer{
+    margin: 100px 0px 0px 0px;
+    padding: 20px 30px 0px 30px;
+    background-color:rgb(94,42,43);
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .footer-text{
+    vertical-align: middle;
+    color:white;
+    font-size:15px;
+    font-family: Ubuntu;
+    padding: 10px 0px 0px 0px;
+    transition: color 0.15s, font-size 0.15s, opacity 0.15s;
+  }
+
+  .footer-text:hover{
+    color: rgb(198,183,132);
+    font-size:20px;
+  }
+
+  .footer-text:active{
+    color: rgb(94,42,43);
+    opacity: 0.6;
+  }
+
+  .footer-header{
+    vertical-align: middle;
+    color:white;
+    font-size:15px;
+    font-family: Ubuntu;
+    text-align: center;
+  }
+
+  .dropdown{
+    position: relative;
+    display: inline-block;
+  }
+
+  .dropdown:hover .dropdown-links {
+      display: block;
+  }
+
+  .dropdown-button{
+    background-color:rgba(255,255,255,0.1);
+    padding: 0px 0px 6px 0px;
+    font-size: 16px;
+    border: none;
+    transition: background-color 0.15s, padding 0.15s;
+  }
+
+  .dropdown-links{ 
+    margin-left: -60px;
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 200px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+
+  .dropdown-links a:hover {
+      background-color: #ddd;
+  }
+
+  .dropdown-links a {
+  color: black;
+  padding: 12px 16px;
+  display: block;
+  }
+
+  .dropdown:hover .dropdown-button {
+    background-color: rgba(255,255,255,1);
+    padding: 10px 10px 10px 10px;
+  }
+
+  </style>
+</head>
 <body>
-<h1>Hello World</h1>
-<p>I'm hosted with GitHub Pages.</p>
+
+  <div class="banner">
+
+    <a href = http://thomasliu.infinityfreeapp.com/homepage.php?><img class="logo" src="https://cdnsm5-ss20.sharpschool.com/UserFiles/Servers/Server_2742355/Image/Theme/Dunlap%20High%20School%20Logo%20-%20Seal-01.png"></a>
+
+    <div class="dropdown">
+        <button class="dropdown-button"><img class="logo" src="https://cdn-icons-png.flaticon.com/512/59/59660.png"></button>
+        <div class="dropdown-links">
+            <a class="banner-text" href = http://thomasliu.infinityfreeapp.com/display.php>List of Available Jobs</a>
+            <br>
+            <a class="banner-text" href = http://thomasliu.infinityfreeapp.com/filetest.php>Meet The Team</a>
+            <br>
+        </div>
+    </div>
+    <a href = http://thomasliu.infinityfreeapp.com/profile.php><img class="logo" src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png"> </a>
+  </div>
+
+  <h1 class="title" id="screen1">
+    Eagles Nest
+  </h1>
+
+  <h4 class="header">
+    Empowering Eagles with Local Job Opportunities and Employer Partnerships.
+  </h4>
+
+  <h1 class="text">
+   Welcome to Eagles Nest, where we empower our eagles with local job opportunities and employer partnerships. We are dedicated to showcasing talent and connecting leaders with aspiring young individuals by creating an efficient system for managing job candidates and posting applications. Being a member of the workforce is simplified by our system, which makes it easier to search for jobs as well as allow individuals to showcase their skills and explore career paths. Whether you're a student seeking work or a local employer looking to help the community, we are determined to aid you. Join us in shaping the futures of the next generation at Eagles Nest. Empowering Eagles!
+  </h1>
+  <br>
+  <br>
+  <img src="https://sportshub2-uploads.vnn-prod.zone/files/sites/264/2023/08/21174430/Dunlap-Eagles-Poster_Sponsors-768x432.png" style='width: 70%; margin-left: auto; margin-right: auto; display: block;'>
+    <div class="footer">
+
+    <img class="logo" src="https://cdnsm5-ss20.sharpschool.com/UserFiles/Servers/Server_2742355/Image/Theme/Dunlap%20High%20School%20Logo%20-%20Seal-01.png">
+
+    <h1 class="footer-header">Special thanks to InfinityFree for 
+    <br>
+    allowing us to host our website for free.</h1>
+
+    <a class="footer-text" href = http://thomasliu.infinityfreeapp.com/credits.php?>Credits</a>
+
+  </div>
 </body>
 </html>
