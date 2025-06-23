@@ -180,3 +180,25 @@
     width: 120%;
     height:120%;
   }
+  .form{
+    text-align: center;
+    font-family: Ubuntu;
+    background-color: rgba(255,255,255,0.8);
+    color: rgb(94,42,43);
+  }
+
+  .input{
+    background-color: rgb(94,42,43);
+    color:rgb(198,183,132);
+    border-radius:4px;
+    font-family: Ubuntu;
+    font-weight:bold;
+    transition: padding 0.15s, background-color 0.15s, color 0.15s;
+  }
+
+  .input:hover{
+    padding: 10px 50px 10px 50px;
+    background-color: rgb(198,183,132);
+    color:rgb(94,42,43);
+    cursor:pointer;
+  }
