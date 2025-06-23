@@ -149,3 +149,34 @@
     background-color: rgba(255,255,255,1);
     padding: 10px 10px 10px 10px;
   }
+
+  .table{
+    background-color:rgba(198,183,132,0.8);
+    font-family: Ubuntu;
+    border-radius: 1px;
+    border-color: white;
+    color: white;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .first-row{
+    font-weight: bold;
+    background-color: rgb(94,42,43);
+    color: rgb(198,183,132);
+  }
+
+  .link{
+    color: white;
+    font-weight: bold;
+  }
+
+  .new-row{
+    transition: background-color 0.15s, width 0.15s, height 0.15s;
+  }
+
+  .new-row:hover{
+    background-color:rgba(198,183,132,1);
+    width: 120%;
+    height:120%;
+  }
