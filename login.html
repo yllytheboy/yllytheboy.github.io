@@ -4,8 +4,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Eagles Nest</title>
   <link rel="icon" href="https://cdnsm5-ss20.sharpschool.com/UserFiles/Servers/Server_2742355/Image/Theme/Dunlap%20High%20School%20Logo%20-%20Seal-01.png" type="image">
+  <title>Eagles Nest</title>
   <link href="/style.css" rel="stylesheet" type="text/css">
   <!--Linking Ubuntu used in Google Fonts-->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -13,6 +13,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
 </head>
 <body>
+
   <div class="banner">
 
     <a href = http://thomasliu.infinityfreeapp.com/homepage.php?><img class="logo" src="https://cdnsm5-ss20.sharpschool.com/UserFiles/Servers/Server_2742355/Image/Theme/Dunlap%20High%20School%20Logo%20-%20Seal-01.png"></a>
@@ -30,24 +31,24 @@
   </div>
 
   <h1 class="title" id="screen1">
-    Apply to be an employer!
+    Eagles Nest
   </h1>
-<!--This form takes the inputs and posts them to empsubmit.php-->
-    <form class="form" action="/empsubmit.js" method = "POST" enctype="multipart/form-data">
+
+  <h4 class="header">
+  Enter your account details here! If you don't have an account consider<a href = http://thomasliu.infinityfreeapp.com/createuser.php> making one</a>. <br>
+  
+  </h4>
+  <!--This is the form that the user inputs through.-->
+  <div class="form">
+    <form action="/loginpage.php" method = "POST">
       <label for="username">Username:</label><br>
-      <input type="text" id="username" name="username" value=""><br>
+      <input type="text" id="username" name="username" value="" required><br>
       <label for="pwww">Password:</label><br>
-      <input type="text" id="pwww" name="pwww" value=""><br>
-      <label for="organization">Organization:</label><br>
-      <input type="text" id="organization" name="organization" value=""><br>
-      <label for="phone">Phone Number:</label><br>
-      <input type="text" id="phone" name="phone" value=""><br>
-      <label for="img1">Proof that you are actually part of said organization (must use .jpg format). Name your file username_employer_proof.jpg</label><br> 
-      <input type="file" id="img1" name="img1"><br>
-      <label for="otherinfo">Anything else?</label><br>
-      <input type="text" id="otherinfo" name="otherinfo" value=""><br><br>
-      <input class="input" type="submit" value="Apply">
+      <input type="password" id="pwww" name="pwww" value="" required><br><br>
+      <input class="input" type="submit" value="Log in">
     </form>
+  </div>
+
     <div class="footer">
 
     <img class="logo" src="https://cdnsm5-ss20.sharpschool.com/UserFiles/Servers/Server_2742355/Image/Theme/Dunlap%20High%20School%20Logo%20-%20Seal-01.png">
@@ -59,5 +60,7 @@
     <a class="footer-text" href = http://thomasliu.infinityfreeapp.com/credits.php?>Credits</a>
 
   </div>
+
+
 </body>
 </html>

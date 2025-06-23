@@ -1,18 +1,18 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html>
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Eagles Nest</title>
   <link rel="icon" href="https://cdnsm5-ss20.sharpschool.com/UserFiles/Servers/Server_2742355/Image/Theme/Dunlap%20High%20School%20Logo%20-%20Seal-01.png" type="image">
   <link href="/style.css" rel="stylesheet" type="text/css">
+  <title>View Applications</title>
   <!--Linking Ubuntu used in Google Fonts-->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
 </head>
 <body>
+
   <div class="banner">
 
     <a href = http://thomasliu.infinityfreeapp.com/homepage.php?><img class="logo" src="https://cdnsm5-ss20.sharpschool.com/UserFiles/Servers/Server_2742355/Image/Theme/Dunlap%20High%20School%20Logo%20-%20Seal-01.png"></a>
@@ -22,32 +22,20 @@
         <div class="dropdown-links">
             <a class="banner-text" href = http://thomasliu.infinityfreeapp.com/display.php>List of Available Jobs</a>
             <br>
-            <a class="banner-text" href = http://thomasliu.infinityfreeapp.com/filetest.php>Meet The Team</a>
+            <a class="banner-text" href = http://thomasliu.infinityfreeapp.com/meettheteam.php>Meet The Team</a>
             <br>
         </div>
     </div>
     <a href = http://thomasliu.infinityfreeapp.com/profile.php><img class="logo" src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png"> </a>
   </div>
 
-  <h1 class="title" id="screen1">
-    Apply to be an employer!
-  </h1>
-<!--This form takes the inputs and posts them to empsubmit.php-->
-    <form class="form" action="/empsubmit.js" method = "POST" enctype="multipart/form-data">
-      <label for="username">Username:</label><br>
-      <input type="text" id="username" name="username" value=""><br>
-      <label for="pwww">Password:</label><br>
-      <input type="text" id="pwww" name="pwww" value=""><br>
-      <label for="organization">Organization:</label><br>
-      <input type="text" id="organization" name="organization" value=""><br>
-      <label for="phone">Phone Number:</label><br>
-      <input type="text" id="phone" name="phone" value=""><br>
-      <label for="img1">Proof that you are actually part of said organization (must use .jpg format). Name your file username_employer_proof.jpg</label><br> 
-      <input type="file" id="img1" name="img1"><br>
-      <label for="otherinfo">Anything else?</label><br>
-      <input type="text" id="otherinfo" name="otherinfo" value=""><br><br>
-      <input class="input" type="submit" value="Apply">
-    </form>
+
+<h1 class="title">
+</h1>
+<table class="table">
+<!-- This is the first row of the table, which is static. -->
+<tr class="first-row"><td>Job ID</td><td>Username</td><td>Phone Number</td><td>Proof of Identity</td><td>Resume</td></tr>
+</table>
     <div class="footer">
 
     <img class="logo" src="https://cdnsm5-ss20.sharpschool.com/UserFiles/Servers/Server_2742355/Image/Theme/Dunlap%20High%20School%20Logo%20-%20Seal-01.png">
