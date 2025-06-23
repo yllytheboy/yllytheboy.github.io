@@ -1,18 +1,17 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html>
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="icon" href="https://cdnsm5-ss20.sharpschool.com/UserFiles/Servers/Server_2742355/Image/Theme/Dunlap%20High%20School%20Logo%20-%20Seal-01.png" type="image">
-  <title>Eagles Nest</title>
   <link href='/style.css' rel='stylesheet'>
+  <title>Job Application</title>
   <!--Linking Ubuntu used in Google Fonts-->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
   <!--Creating a background image that is constant-->
-  <style>
+<style>
   body {
     background-image: url('https://i.postimg.cc/Lsqw6LPf/dunlaphigh.jpg');
     max-width:20000px;
@@ -47,7 +46,7 @@
     justify-content: space-between;
   }
 
-  .banner-text{
+ .banner-text{
     vertical-align: middle;
     color:black;
     font-size:20px;
@@ -65,6 +64,7 @@
     color: rgb(94,42,43);
     opacity: 0.6;
   }
+
   .header{
     font-family: Ubuntu;
     font-size: 20px;
@@ -83,11 +83,11 @@
   }
 
   .logo{
-    max-height: 50px;
-    max-width: 50px;
-   }
-   
-    .footer{
+    width: 50px;
+    padding: 0px 0px 20px 0px;
+  }
+
+  .footer{
     margin: 100px 0px 0px 0px;
     padding: 20px 30px 0px 30px;
     background-color:rgb(94,42,43);
@@ -121,6 +121,7 @@
     font-family: Ubuntu;
     text-align: center;
   }
+
   .form{
     text-align: center;
     font-family: Ubuntu;
@@ -150,7 +151,7 @@
   }
 
   .dropdown:hover .dropdown-links {
-      display: block;
+    display: block;
   }
 
   .dropdown-button{
@@ -186,13 +187,42 @@
     padding: 10px 10px 10px 10px;
   }
 
+    .table{
+    background-color:rgba(198,183,132,0.8);
+    font-family: Ubuntu;
+    border-color: white;
+    color: white;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .first-row{
+    font-weight: bold;
+    background-color: rgb(94,42,43);
+    color: rgb(198,183,132);
+  }
+
+  .link{
+    color: white;
+    font-weight: bold;
+  }
+
+  .new-row{
+    transition: background-color 0.15s, width 0.15s, height 0.15s;
+  }
+
+  .new-row:hover{
+    background-color:rgba(198,183,132,1);
+    width: 120%;
+    height:120%;
+  }
+
   </style>
 </head>
 <body>
-
   <div class="banner">
 
-    <a href = http://thomasliu.infinityfreeapp.com/homepage.php?><img class="logo" src="https://cdnsm5-ss20.sharpschool.com/UserFiles/Servers/Server_2742355/Image/Theme/Dunlap%20High%20School%20Logo%20-%20Seal-01.png"></a>
+    <a href = http://thomasliu.infinityfreeapp.com/homepage.php?><img class="logo"     src="https://cdnsm5-ss20.sharpschool.com/UserFiles/Servers/Server_2742355/Image/Theme/Dunlap%20High%20School%20Logo%20-%20Seal-01.png"></a>
 
     <div class="dropdown">
         <button class="dropdown-button"><img class="logo" src="https://cdn-icons-png.flaticon.com/512/59/59660.png"></button>
@@ -205,44 +235,35 @@
     </div>
     <a href = http://thomasliu.infinityfreeapp.com/profile.php><img class="logo" src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png"> </a>
   </div>
-
-  <h1 class="title" id="screen1">
-    Eagles Nest
+  <h1>
+    <h1 class="title">List of Pending Job Postings at DHS</h1><br>
   </h1>
-
-  <h4 class="header">
-    Create an account for a better experience on the site! <br>
-  </h4>
-  <!--The html form that creates an account -->
-  <div class="form">
-    <form action="/createuser.js" method = "POST">
-      <label for="fname">First Name:</label><br>
-      <input type="text" id="fname" name="fname" value=""><br> 
-      <label for="lname">Last Name:</label><br>
-      <input type="text" id="lname" name="lname" value=""><br>
+  <!-- This form asks to enter in the admin username and password so that you can access the pending job postings and employer applications.-->
+    <div class="form">
+    <form action="/approveJobs.html" method = "POST">
       <label for="username">Username:</label><br>
-      <input type="text" id="uesrname" name="username" value=""><br>
+      <input type="text" id="username" name="username" value=""><br>
       <label for="pwww">Password:</label><br>
-      <input type="password" id="pwww" name="pwww" value=""><br>
-      <label for="emailaddress">Email Address:</label><br>
-      <input type="text" id="emailaddress" name="emailaddress" value=""><br><br>
-      <input class="input" type="submit" value="Create Account">
+      <input type="password" id="pwww" name="pwww" value=""><br><br>
+      <input class="input" type="submit" value="See pending job postings and employer applicants">
     </form>
+    <!--This form ends the session so that the next person who enters the page has to enter in the admin username and password.-->
   </div>
+    <form action = "/approveJobs.php" method = "POST">
+    <input type = "hidden" id = "session" name = "session" value = 5><br>
+    <input class = "input" type = "submit" value = "session">
+    </form>
+  </table>
 
-  <h1 class="text">
-   
-  </h1>
-      <div class="footer">
+<div class="footer">
 
-    <img class="logo" src="https://cdnsm5-ss20.sharpschool.com/UserFiles/Servers/Server_2742355/Image/Theme/Dunlap%20High%20School%20Logo%20-%20Seal-01.png">
+<img class="logo" src="https://cdnsm5-ss20.sharpschool.com/UserFiles/Servers/Server_2742355/Image/Theme/Dunlap%20High%20School%20Logo%20-%20Seal-01.png">
 
-    <h1 class="footer-header">Special thanks to InfinityFree for 
-    <br>
-    allowing us to host our website for free.</h1>
+<h1 class="footer-header">Special thanks to InfinityFree for 
+<br>
+allowing us to host our website for free.</h1>
 
-    <a class="footer-text" href = http://thomasliu.infinityfreeapp.com/credits.php?>Credits</a>
+<a class="footer-text" href = http://thomasliu.infinityfreeapp.com/credits.php?>Credits</a>
 
-  </div>
 </body>
 </html>

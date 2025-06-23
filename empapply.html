@@ -5,7 +5,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Eagles Nest</title>
-  <link rel="icon" href="https://cdnsm5-ss20.sharpschool.com/UserFiles/Servers/Server_2742355/Image/Theme/Dunlap%20High%20School%20Logo%20-%20Seal-01.png"   type="image">
+  <link rel="icon" href="https://cdnsm5-ss20.sharpschool.com/UserFiles/Servers/Server_2742355/Image/Theme/Dunlap%20High%20School%20Logo%20-%20Seal-01.png" type="image">
   <link href="/style.css" rel="stylesheet" type="text/css">
   <!--Linking Ubuntu used in Google Fonts-->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -13,10 +13,9 @@
   <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
 </head>
 <body>
-
   <div class="banner">
 
-    <a href = http://yllytheboy.github.io><img class="logo" src="https://cdnsm5-ss20.sharpschool.com/UserFiles/Servers/Server_2742355/Image/Theme/Dunlap%20High%20School%20Logo%20-%20Seal-01.png"></a>
+    <a href = http://thomasliu.infinityfreeapp.com/homepage.php?><img class="logo" src="https://cdnsm5-ss20.sharpschool.com/UserFiles/Servers/Server_2742355/Image/Theme/Dunlap%20High%20School%20Logo%20-%20Seal-01.png"></a>
 
     <div class="dropdown">
         <button class="dropdown-button"><img class="logo" src="https://cdn-icons-png.flaticon.com/512/59/59660.png"></button>
@@ -31,19 +30,24 @@
   </div>
 
   <h1 class="title" id="screen1">
-    Eagles Nest
+    Apply to be an employer!
   </h1>
-
-  <h4 class="header">
-    Empowering Eagles with Local Job Opportunities and Employer Partnerships.
-  </h4>
-
-  <h1 class="text">
-   Welcome to Eagles Nest, where we empower our eagles with local job opportunities and employer partnerships. We are dedicated to showcasing talent and connecting leaders with aspiring young individuals by creating an efficient system for managing job candidates and posting applications. Being a member of the workforce is simplified by our system, which makes it easier to search for jobs as well as allow individuals to showcase their skills and explore career paths. Whether you're a student seeking work or a local employer looking to help the community, we are determined to aid you. Join us in shaping the futures of the next generation at Eagles Nest. Empowering Eagles!
-  </h1>
-  <br>
-  <br>
-  <img src="https://sportshub2-uploads.vnn-prod.zone/files/sites/264/2023/08/21174430/Dunlap-Eagles-Poster_Sponsors-768x432.png" style='width: 70%; margin-left: auto; margin-right: auto; display: block;'>
+<!--This form takes the inputs and posts them to empsubmit.php-->
+    <form class="form" action="/empsubmit.php" method = "POST" enctype="multipart/form-data">
+      <label for="username">Username:</label><br>
+      <input type="text" id="username" name="username" value=""><br>
+      <label for="pwww">Password:</label><br>
+      <input type="text" id="pwww" name="pwww" value=""><br>
+      <label for="organization">Organization:</label><br>
+      <input type="text" id="organization" name="organization" value=""><br>
+      <label for="phone">Phone Number:</label><br>
+      <input type="text" id="phone" name="phone" value=""><br>
+      <label for="img1">Proof that you are actually part of said organization (must use .jpg format). Name your file username_employer_proof.jpg</label><br> 
+      <input type="file" id="img1" name="img1"><br>
+      <label for="otherinfo">Anything else?</label><br>
+      <input type="text" id="otherinfo" name="otherinfo" value=""><br><br>
+      <input class="input" type="submit" value="Apply">
+    </form>
     <div class="footer">
 
     <img class="logo" src="https://cdnsm5-ss20.sharpschool.com/UserFiles/Servers/Server_2742355/Image/Theme/Dunlap%20High%20School%20Logo%20-%20Seal-01.png">
@@ -52,7 +56,7 @@
     <br>
     allowing us to host our website for free.</h1>
 
-    <a class="footer-text" href = http://yllytheboy.github.io/credits.html>Credits</a>
+    <a class="footer-text" href = http://thomasliu.infinityfreeapp.com/credits.php?>Credits</a>
 
   </div>
 </body>
