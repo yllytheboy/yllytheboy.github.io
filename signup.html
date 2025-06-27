@@ -16,26 +16,26 @@
 
   <div class="banner">
 
-    <a href = https://yllytheboy.github.io/index.html><img class="logo" src="https://cdnsm5-ss20.sharpschool.com/UserFiles/Servers/Server_2742355/Image/Theme/Dunlap%20High%20School%20Logo%20-%20Seal-01.png"></a>
+    <a href = https://eaglesnest.dunlapeagles.workers.dev/index.html><img class="logo" src="https://cdnsm5-ss20.sharpschool.com/UserFiles/Servers/Server_2742355/Image/Theme/Dunlap%20High%20School%20Logo%20-%20Seal-01.png"></a>
 
     <div class="dropdown">
         <button class="dropdown-button"><img class="logo" src="https://cdn-icons-png.flaticon.com/512/59/59660.png"></button>
         <div class="dropdown-links">
             <br>
-            <a class="banner-text" href = https://yllytheboy.github.io/submitjobs.html>Submit a Job</a>
+            <a class="banner-text" href = https://eaglesnest.dunlapeagles.workers.dev/submitjobs.html>Submit a Job</a>
             <br>
-            <a class="banner-text" href = https://yllytheboy.github.io/display.html>List of Available Jobs</a>
+            <a class="banner-text" href = https://eaglesnest.dunlapeagles.workers.dev/display.html>List of Available Jobs</a>
             <br>
-            <a class="banner-text" href = https://yllytheboy.github.io/signup.html>Create an Account</a>
+            <a class="banner-text" href = https://eaglesnest.dunlapeagles.workers.dev/signup.html>Create an Account</a>
             <br>
-            <a class="banner-text" href = https://yllytheboy.github.io/login.html>Login</a>
+            <a class="banner-text" href = https://eaglesnest.dunlapeagles.workers.dev/login.html>Login</a>
             <br>
-            <a class="banner-text" href = https://yllytheboy.github.io/empapply.html>Apply to be an Employer</a>
+            <a class="banner-text" href = https://eaglesnest.dunlapeagles.workers.dev/empapply.html>Apply to be an Employer</a>
             <br>
-            <a class="banner-text" href = https://yllytheboy.github.io/logout.js>Logout</a>
+            <a class="banner-text" href = https://eaglesnest.dunlapeagles.workers.dev/logout.js>Logout</a>
         </div>
     </div>
-    <a href = https://yllytheboy.github.io/profile.html><img class="logo" src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png"> </a>
+    <a href = https://eaglesnest.dunlapeagles.workers.dev/profile.html><img class="logo" src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png"> </a>
   </div>
 
   <h1 class="title" id="screen1">
@@ -47,21 +47,75 @@
   </h4>
   <!--The html form that creates an account -->
   <div class="form">
-    <form action="/createuser.js" method = "POST">
+    <form id="signupForm" action="/createuser" method = "POST">
       <label for="fname">First Name:</label><br>
-      <input type="text" id="fname" name="fname" value=""><br> 
+      <input type="text" id="fname" name="fname" required value=""><br> 
       <label for="lname">Last Name:</label><br>
-      <input type="text" id="lname" name="lname" value=""><br>
+      <input type="text" id="lname" name="lname" required value=""><br>
       <label for="username">Username:</label><br>
-      <input type="text" id="uesrname" name="username" value=""><br>
+      <input type="text" id="username" name="username" required value=""><br>
+      <span id="username-status" style="color:red;"></span><br>
       <label for="pwww">Password:</label><br>
-      <input type="password" id="pwww" name="pwww" value=""><br>
+      <input type="password" id="pwww" name="pwww" required value=""><br>
+      <span id="pwww-status" style="color:red;"></span><br>
+      <input type="checkbox" onclick="passwordChanger()">Show Password
       <label for="emailaddress">Email Address:</label><br>
-      <input type="text" id="emailaddress" name="emailaddress" value=""><br><br>
-      <input class="input" type="submit" value="Create Account">
+      <input type="email" id="emailaddress" name="emailaddress" required value=""><br>
+      <span id="email-status" style="color:red;"></span><br><br>
+      <input id="submitButton" class="input" type="submit" disabled value="Create Account">
     </form>
   </div>
+  <script>
+    //Default the username and email invalid
+    let usernameValid = false
+    let emailValid = false
+    //Check the username and email statuses
+    document.getElementById("username").addEventListener("input", async () => {
+      const username = document.getElementById("username").value
+      const res = await fetch(`/check-username?username=${encodeURIComponent(username)}`)
+      const { usernameTaken } = await res.json()
 
+    document.getElementById("username-status").textContent =
+      usernameTaken ? "Username is already in use" : ""
+      usernameValid = !usernameTaken
+      updateSubmitState()
+    })
+
+    document.getElementById("emailaddress").addEventListener("input", async () => {
+      const emailaddress = document.getElementById("emailaddress").value
+      const res = await fetch(`/check-email?emailAddress=${encodeURIComponent(emailaddress)}`)
+      const { emailTaken } = await res.json()
+
+    document.getElementById("email-status").textContent =
+      emailTaken ? "Email is already in use" : ""
+      emailValid = !emailTaken
+      updateSubmitState()
+    })
+    
+    //Make the form sumbittable or not based on the form status
+    const form = document.getElementById("signupForm")
+    const submitBtn = document.getElementById("submitButton")
+
+    //Activate or deactivate the submit button based on the form
+    function updateSubmitState() {
+      submitBtn.disabled = !form.checkValidity() || !usernameValid || !emailValid
+    }
+
+    //For enabling hidden and shown passwords
+    function passwordChanger() {
+      var x = document.getElementById("pwww");
+      if (x.type === "password") {
+        x.type = "text";
+      } else {
+        x.type = "password";
+      }
+    }
+
+    document.getElementById("pwww").addEventListener("input", async () => {
+      
+    })
+  
+  </script>
   <h1 class="text">
    
   </h1>
@@ -69,11 +123,11 @@
 
     <img class="logo" src="https://cdnsm5-ss20.sharpschool.com/UserFiles/Servers/Server_2742355/Image/Theme/Dunlap%20High%20School%20Logo%20-%20Seal-01.png">
 
-    <h1 class="footer-header">Special thanks to InfinityFree for 
+    <h1 class="footer-header">Special thanks to CloudFlare for 
     <br>
     allowing us to host our website for free.</h1>
 
-    <a class="footer-text" href = https://yllytheboy.github.io/credits.html>Credits</a>
+    <a class="footer-text" href = https://eaglesnest.dunlapeagles.workers.dev/credits.html>Credits</a>
 
   </div>
 </body>
